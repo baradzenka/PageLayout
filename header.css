@@ -1,0 +1,131 @@
+
+.header {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	border-bottom: 2px solid #eff2f2;
+}
+@media (max-width: 1024px) {   /* <1024 */
+	.header {
+		border-bottom: 1px solid #eff5fb;
+	}
+}
+
+.header__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+	min-height: 76px;
+	margin: 0 32px;
+	font-family: "Montserrat", sans-serif;
+}
+.header__logo-img {
+	vertical-align: middle;
+}
+@media (max-width: 768px) {   /* <=768 */
+	.header__content {
+		margin: 0 20px;
+	}
+}
+@media (max-width: 414px) {   /* <=414 */
+	.header__content {
+		margin: 0 24px;
+		min-height: 72px;
+	}
+	.header__logo-img {
+		width: 48px;
+		height: 34px;
+	}
+}
+@media (max-width: 320px) {   /* <=320 */
+	.header__content {
+		margin: 0 8px 0 16px;
+		min-height: 56px;
+	}
+}
+
+.header__nav {
+	display: block;
+	flex-grow: 1;
+	padding-left: 51px;
+	white-space: nowrap;
+}
+.header__items {
+	display: flex;
+	flex-wrap: wrap;	
+	column-gap: 30px;
+	padding: 0;
+	list-style-type: none;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.25px;
+}
+@media (max-width: 1439px) {   /* <1440 */
+	.header__nav {
+		padding-left: 32px;
+	}
+	.header__items {
+		column-gap: 16px;
+	}
+}
+
+.header__item-link {
+	text-decoration: none;
+	color: #333333;
+}
+.header__item-link:hover {
+	color: #19a89d;
+}
+
+.header__item-img_type_arrow-right {
+	margin-left: 4px;
+	margin-bottom: 1px;
+}
+@media (max-width: 1439px) {   /* <1440 */
+	.header__item-img_type_arrow-right {
+		margin-left: 1px;
+	}
+}
+
+.header__btn {
+	min-width: 230px;
+	min-height: 48px;
+	border-width: 0px;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: inherit;
+	color: #03b2a5;
+	background-color: #e3f5f5;
+}
+
+.header__dropdown-menu-marker {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 4px;
+	width: 40px;
+	height: 40px;
+}
+.header__dropdown-menu-marker > div {
+	width: 18px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #03b2a5;
+}
+
+
+@media (min-width: 1024px) {   /* >=1024 */
+	.header__dropdown-menu-marker {
+		display: none;
+	}
+}
+@media (max-width: 1023px) {   /* <1024 */
+	.header__nav,
+	.header__btn {
+		display: none;
+	}
+}
